@@ -16,7 +16,7 @@ With our data as well as the critical exponents obtained from scalings, one can 
   1. Data collpase of $\rho(E)\delta^{-\nu (d - z)}$ against $|E|\delta^{-\nu z}$ over full range of $W$ on the largest system size of one certain dimension, and
   2. Finite-size data collapse of $\rho(0)L^{d - z}$ against $\delta L ^{1 / \nu}$ on the metallic side (i.e., for $W > W_{c}$).
 
-## Repository contents
+## Repository contents and layouts
 
 The detailed layout and repository contents are as follows:
 
@@ -42,7 +42,52 @@ Upper-critical-dimension-for-dirty-Weyl-semimetal-to-metal-quantum-phase-transit
 |   |   |── Hamiltonians.py
 |   |   └── input.yaml
 |   └────── postroutines.py
-└── Weyl_semimetal_upper_critical_dim.zip          # the raw data
+└── Weyl_semimetal_upper_critical_dim.zip          # the raw data and scripts for post-precessing/scaling analysis 
+```
+
+All the raw data and scripts for post-precessing/scaling analysis are zipped in `Weyl_semimetal_upper_critical_dim.zip`. After unzipping, the layout is:
+
+```
+Weyl_semimetal_upper_critical_dim/
+├── ADOS_2D/                                       # The master directory that stores all raw data for 2D Weyl fermions (here, L = 2500)
+|   ├── L_2500/                                    # The sub-directory that stores all data for one particular system size (here, L = 2500)
+|   |   ├── datafiles_x/                           # The directory that stores all data files for one particular job, where "x" (as a three-digit integer) stands for a job index. 
+|   |   ├── ...
+|   |   └── job_table_ADOS_2D_L2500.xlsx           # The spreadsheet that maps the job to a disorder strength, and some other key input parameters
+|   └── preliminary_results/                       # The master directory that stores system size-dependent ADOS vs. W data. 
+|       └── ADOS_vs_W_L2500/                       # The sub-directory that stores ADOS vs. W data for a specific system size (here, L = 2500)
+|           └── ADOS_vs_W_L2500.txt                # the ADOS vs. W data
+| 
+├── ADOS_3D/                                       # The master directory that stores all raw data for 3D Weyl fermions 
+|   ├── L_0100/                                    # The sub-directory that stores all data for one particular system size (here, L = 100)
+|   |   ├── datafiles_x/                           # The directory that stores all data files for one particular job, where "x" (as a three-digit integer) stands for a job index. 
+|   |   ├── ...
+|   |   └── job_table_ADOS_3D_L0100.xlsx           # The spreadsheet that maps the job to a disorder strength, and some other key input parameters
+|   ├── L_0120/                                    # The master directory that stores all raw data for 3D Weyl fermions (here, L = 120)
+|   |   └── ...
+|   ├── ...
+|   └── preliminary_results/                       # The master directory that stores system size-dependent ADOS vs. W data. 
+|       └── ...
+├── ADOS_4D/                                       # The master directory that stores all raw data for 4D Weyl fermions 
+|   └── ...
+├── ADOS_5D/                                       # The master directory that stores all raw data for 5D Weyl fermions 
+|   └── ...
+├── ADOS_6D/                                       # The master directory that stores all raw data for 6D Weyl fermions 
+|   └── ...
+├── Comprehensive_plots/
+└── post_processing_routines
+    ├── ADOS_processing/
+    |   └── ADOS_extractor.py
+    ├── Plotters/
+    |   ├── ADOS_plotters.py
+    |   ├── Comprehensive_ADOS_scaling_plotter.py
+    |   ├── Comprehensive_data_collapsing.py
+    |   └── E_rescaling_and_BCS_scaling.py
+    ├── Scaling_analysis/
+        ├── Comprehensive_ADOS_scaling_plotter.py
+        ├── Comprehensive_data_collapsing.py
+        └── E_rescaling_and_BCS_scaling.py
+
 ```
 
 
