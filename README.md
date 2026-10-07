@@ -7,15 +7,10 @@
 This repository contains extensive raw data and necessray code and scripts that does kernel polynomial method (KPM) [^1] calculations using `kwant` [^2] and data analysis for our numerical study on the upper-critical dimension for disordered Weyl semimetal-to-metal transitions. 
 
 From our raw data, one can perform several scaling analyses and data collapses. Key scaling analyses include:
-  1. BCS like scaling for average density of states (ADOS) at zero energy as a function of disorder strength for 2D Weyl fermions: 
-  
-    $$
-    \rho(0) ~ \exp(-\lambda / W),
-    $$ 
-  
-    where $\lambda$ is a non-universal fitting parameter.
-  2. say something
-  3. 
+  1. BCS like scaling for average density of states (ADOS) at zero energy as a function of disorder strength for 2D Weyl fermions: $\rho(0) ~ \exp(-\lambda / W),$ where $\lambda$ is a non-universal fitting parameter.
+  2. ADOS scaling at criticality for $d \geq 3$: $\rho(E) ~ |E|^{\frac{d}{z} - 1}$, where $z$ is the dynamic exponent.
+  3. ADOS at zero energy scaling as a function of the reduced distance from quantum critical point (QCP) for $d \geq 3$: $\rho(0) ~ \delta ^{\beta}, where $\beta$ is the order parameter exponent.
+With $z$ and $\beta$ obtained from this series of scaling analyses, one may evaluate the correlation length exponent $\nu$ as $\nu = \beta / (d - z)$ for $d \geq 3$. 
 
 ## Repository contents
 
