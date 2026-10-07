@@ -44,20 +44,6 @@ Upper-critical-dimension-for-dirty-Weyl-semimetal-to-metal-quantum-phase-transit
         |── postroutines.py
 ├── Weyl_semimetal_upper_critical_dim.zip          ...
 
-
-
-├── kpm/                   the Python package
-│   ├── io.py              filename conventions + data loading
-│   ├── model.py           tight-binding Hamiltonian + KPM DOS kernel (needs kwant)
-│   ├── generate.py        produce single-seed DOS data
-│   ├── consolidate.py     seed-average + pack into .npz
-│   ├── fit.py             critical-exponent analysis (z, beta, nu)
-│   └── figures.py         the six-panel scaling figure
-└── data/
-    ├── singles/           single-seed DOS  (primary dataset, 1101 files)
-    ├── seed_averaged/     DOS averaged over seeds        [derived]
-    ├── products/          (W, E, DOS) .npz per (t2, L)   [derived]
-    └── figures/           scaling_t2_{t2}.pdf            [derived]
 ```
 
 
