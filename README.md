@@ -4,7 +4,6 @@
 
 ## Overview
 
-Comments: 	8 Pages and 3 Figures (Supplemental Material as Ancillary file)
 
 ## Repository contents
 
