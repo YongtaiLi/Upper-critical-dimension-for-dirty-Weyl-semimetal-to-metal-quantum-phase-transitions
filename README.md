@@ -114,10 +114,10 @@ Weyl_semimetal_upper_critical_dim/
   For example, consider:
   
   ```
-  ADOS_4D\L_0052\datafiles_014
+  ADOS_4D/L_0052/datafiles_014/
   ```
 
-  (...)
+  It means this job with index `014` is for 4D Weyl fermion calculated on a system with size $L = 52$. But looking at the spreadsheet `job_table_ADOS_4D_L0052.xlsx`, we find that the job directory is for $W = 3.25$. 
 * ####  For data files
   (say something)
 ## Data format
