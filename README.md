@@ -3,9 +3,8 @@
 ### Data and codes accompanying the manuscript "Upper critical dimension for dirty Weyl semimetal-to-metal quantum phase transitions" ([arXiv:2609.30265 (2026)](https://arxiv.org/abs/2609.30265))
 
 ## Overview
-Weyl or Dirac fermions with the iconic linear energy-momentum relation and average density of states (ADOS) $\rho(E)∼|E|^{d−1}$ at energy $E$ in $d$ spatial dimensions, constitute a unique setup to study the disorder-driven semimetal-to-metal quantum phase transition (QPT) between ballistic (realized for weak disorder) and diffusive (stabilized at stronger disorder) quasiparticles. Such a QPT takes place only for $d > 2$ and falls beyond the realm of the Anderson metal-to-insulator transition. From numerically computed ADOS (using the kernel polynomial method) in dirty Weyl systems in $d = 2$ to $6$, here we show that $d = 2$ and d=4 are the lower ($d_{l}$) and upper ($d_{u}$) critical dimensions for such an unconventional QPT, respectively. Consequently, for $d \geq 4$ the associated correlation length exponent is found to be $\nu \approx 0.5$ (within numerical accuracy). However, the dynamic scaling exponent at the quantum critical point is pinned close to z≈d/2 (numerically) for any $d \geq 3$, which is shown to be an exact result from a field-theoretic renormalization group calculation. Therefore, Weyl semimetal-to-metal QPTs can be studied field theoretically around both $d_{l}$ and $d_{u}$. 
 
-This repository contains raw data and necessray ...
+This repository contains extensive raw data and necessray code and scripts that does kernel polynomial method (KPM) [^1] calculations using 'kwant' [^2] and data analysis for our numerical study on the upper-critical dimension for disordered Weyl semimetal-to-metal transitions.
 
 ## Repository contents
 
@@ -21,4 +20,6 @@ This repository contains raw data and necessray ...
 
 ## Using the data
 
-
+## Citations:
+[^1]: A. Weiße, G. Wellein, A. Alvermann, and H. Fehske, The kernel polynomial method, Rev. Mod. Phys. 78, 275 (2006)
+[^2]: C. W. Groth, M. Wimmer, A. R. Akhmerov, and X. Waintal, Kwant: a software package for quantum transport, New J. Phys. 16, 063065 (2014)
