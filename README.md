@@ -109,7 +109,7 @@ Weyl_semimetal_upper_critical_dim/
   ADOS_dD/L_l/datafiles_x/
   ```
   
-  where `d` (for dimension) is a one-digit integer (`d` = 2, 3, 4, 5, and 6), `l` (for system size) is a four-digit integer, and `x` (for job index) is a three-digit integer. One will find the mapping between a specific job index and its corresponding disorder strength in the spreadsheet named `job_table_ADOS_dD_Ll.xlsx` within `ADOS_dD/L_l/`.
+  Here, `d` (for dimension) is a one-digit integer (`d` = 2, 3, 4, 5, and 6), `l` (for system size) is a four-digit integer, and `x` (for job index) is a three-digit integer. One will find the mapping between a specific job index and its corresponding disorder strength in the spreadsheet named `job_table_ADOS_dD_Ll.xlsx` within `ADOS_dD/L_l/`.
 
   For example, consider:
   
@@ -122,7 +122,7 @@ Weyl_semimetal_upper_critical_dim/
   * ##### If a job is run completely in a serial manner:
     There are typically one sub-directory and two other files, as
     ```
-    datafiles_x/
+    .../datafiles_x/
     ├── ADOS_jobx_Ww.dat
     ├── YT_jobx_Ww.out
     ├── kwant-Z.out                  # Optional, depending on if the job is run on local machines or HPC provided by the institution.
@@ -131,6 +131,16 @@ Weyl_semimetal_upper_critical_dim/
     Here, `ADOS_jobx_Ww.dat` is the data file for average density of states (ADOS) for job with index `x` and disorder strength `w` (as a string from float with decimal point removed). `YT_jobx_Ww.out` is the standard output file that contains the input parameters, the time consumption of each disorder realization, and the ending message. `tempfiles_x/` contains the temporary file from density of states from the binned disorder realizations.
 
     Depending on whether one specific job is run on local machines or HPC provided by the institutions, there is a `kwant-Z.out` file if run on HPC, where `Z` is usually an 8-digit integer as the job ID the SLURM job scheduler assigned.
+
+    For exmaple, consider the following within `ADOS_3D/L_0120/datafiles_006/`:
+    ```
+    .../datafiles_006/
+    ├── ADOS_job006_W275.dat
+    ├── YT_job006_W275.out
+    ├── kwant-14233913.out
+    └── tempfiles_006/
+    ```
+    Here, $W = 2.75$, `ADOS_job006_W275.dat` contains the ADOS data for this job, `YT_job006_W275.out` is the standard output file, and `tempfiles_006/` contains the DOS from several disorder realizations. Since this job was run on HPC with job ID `14233913`, there exists the file `kwant-14233913.out`. 
     
   * ##### If a job is run in a manually parallel way:
     (...)
