@@ -118,8 +118,22 @@ Weyl_semimetal_upper_critical_dim/
   ```
 
   It means this job with index `014` is for 4D Weyl fermion calculated on a system with size $L = 52$. But looking at the spreadsheet `job_table_ADOS_4D_L0052.xlsx`, we find that the job directory is for $W = 3.25$. 
-* ####  For data files
-  (say something)
+* ####  For data files within `datafiles_x/`
+  * ##### If a job is run completely in a serial manner:
+    There are typically one sub-directory and two other files, as
+    ```
+    datafiles_x/
+    ├── ADOS_jobx_Ww.dat
+    ├── YT_jobx_Ww.out
+    ├── kwant-Z.out                  # Optional, depending on if the job is run on local machines or HPC provided by the institution.
+    └── tempfiles_x/
+    ```
+    Here, `ADOS_jobx_Ww.dat` is the data file for average density of states (ADOS) for job with index `x` and disorder strength `w` (as a string from float with decimal point removed). `YT_jobx_Ww.out` is the standard output file that contains the input parameters, the time consumption of each disorder realization, and the ending message. `tempfiles_x/` contains the temporary file from density of states from the binned disorder realizations.
+
+    Depending on whether one specific job is run on local machines or HPC provided by the institutions, there is a `kwant-Z.out` file if run on HPC, where `Z` is usually an 8-digit integer as the job ID the SLURM job scheduler assigned.
+    
+  * ##### If a job is run in a manually parallel way:
+    (...)
 ## Data format
 
 
