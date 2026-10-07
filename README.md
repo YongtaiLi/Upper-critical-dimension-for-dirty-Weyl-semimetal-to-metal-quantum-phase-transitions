@@ -1,6 +1,6 @@
 # Upper-critical-dimension-for-dirty-Weyl-semimetal-to-metal-quantum-phase-transitions
 
-### Data an scripts accompanying the manuscript "Upper critical dimension for dirty Weyl semimetal-to-metal quantum phase transitions" ([arXiv:2609.30265 (2026)](https://arxiv.org/abs/2609.30265))
+### Data and codes accompanying the manuscript "Upper critical dimension for dirty Weyl semimetal-to-metal quantum phase transitions" ([arXiv:2609.30265 (2026)](https://arxiv.org/abs/2609.30265))
 
 ## Overview
 Brief description of the dataset and associated publication.
