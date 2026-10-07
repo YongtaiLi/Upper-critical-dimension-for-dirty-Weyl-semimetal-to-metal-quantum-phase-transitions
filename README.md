@@ -143,7 +143,55 @@ Weyl_semimetal_upper_critical_dim/
     Here, $W = 2.75$, `ADOS_job006_W275.dat` contains the ADOS data for this job, `YT_job006_W275.out` is the standard output file, and `tempfiles_006/` contains the DOS from several disorder realizations. Since this job was run on HPC with job ID `14233913`, there exists the file `kwant-14233913.out`. 
     
   * ##### If a job is run in a manually parallel way:
-    (...)
+    There sub-directory typically looks like
+    ```
+    .../datafiles_x/
+    ├── ADOS_jobx_Ww.dat
+    ├── datafiles_x_01/
+    |   ├── ADOS_jobx_01_Ww.dat
+    |   ├── kwant-Z1.out
+    |   └── YT_jobx_01_Ww.out
+    └── datafiles_x_02/
+    |   ├── ADOS_jobx_02_Ww.dat
+    |   ├── kwant-Z2.out
+    |   └── YT_jobx_02_Ww.out
+    ├── tempfiles_x_01/
+    |   └── ...
+    └── tempfiles_x_02/
+        └── ...
+    ```
+    Here, `Z1` and `Z2` coming from `kwant-Z1.out` and `kwant-Z2.out`, respectively, are different job IDs assigned by the SLURM scheduler for eahc individual "sub-jobs". The ADOS file `ADOS_jobx_Ww.dat` right under `.../datafiles_x/` is obtained via running the script `.../post_processing_routines/ADOS_processing/ADOS_extractor.py`.
+
+    An example could be, within `ADOS_6D/L_0012/datafiles_030/`:
+    ```
+    .../datafiles_030/
+    ├── ADOS_job030_W415.dat
+    ├── datafiles_030_01/
+    |   ├── ADOS_job030_01_W415.dat
+    |   ├── kwant-14287758.out
+    |   └── YT_job030_01_W415.out
+    ├── datafiles_030_02/
+    |   ├── ADOS_job030_02_W415.dat
+    |   ├── kwant-14287759.out
+    |   └── YT_job030_02_W415.out
+    ├── datafiles_030_03/
+    |   ├── ADOS_job030_03_W415.dat
+    |   ├── kwant-14287760.out
+    |   └── YT_job030_03_W415.out
+    ├── datafiles_030_04/
+    |   ├── ADOS_job030_04_W415.dat
+    |   ├── kwant-14287767.out
+    |   └── YT_job030_04_W415.out
+    ├── tempfiles_030_01/
+    |   └── ...
+    ├── tempfiles_030_02/
+    |   └── ...
+    ├── tempfiles_030_03/
+    |   └── ...
+    └── tempfiles_030_04/
+        └── ...
+    ```
+    
 ## Data format
 
 
