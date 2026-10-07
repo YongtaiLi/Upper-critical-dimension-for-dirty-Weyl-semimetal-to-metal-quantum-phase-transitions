@@ -105,16 +105,19 @@ Weyl_semimetal_upper_critical_dim/
 * ####  For data file directories named `datafiles_x/`
   Each single job (corresponding to a unique combination of disorder strength, dimension, and system size) are typically
 
-  ``
+  ```
   ADOS_dD/L_l/datafiles_x/
-  ``
+  ```
+  
   where `d` (for dimension) is a one-digit integer (`d` = 2, 3, 4, 5, and 6), `l` (for system size) is a four-digit integer, and `x` (for job index) is a three-digit integer. One will find the mapping between a specific job index and its corresponding disorder strength in the spreadsheet named `job_table_ADOS_dD_Ll.xlsx` within `ADOS_dD/L_l/`.
 
   For example, consider:
-  ``
-  ADOS_4D\L_0052\datafiles_014
-  ``
   
+  ```
+  ADOS_4D\L_0052\datafiles_014
+  ```
+
+  (...)
 * ####  For data files
   (say something)
 ## Data format
