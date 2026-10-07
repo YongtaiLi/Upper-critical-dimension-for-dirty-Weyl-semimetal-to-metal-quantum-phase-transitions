@@ -9,11 +9,11 @@ This repository contains extensive raw data and necessray code and scripts that 
 From our raw data, one can perform several scaling analyses and data collapses. Key scaling analyses include:
   1. BCS like scaling for average density of states (ADOS) at zero energy as a function of disorder strength for 2D Weyl fermions: 
   
-  $$
-  \rho(0) ~ \exp(-\lambda / W),
-  $$ 
+    $$
+    \rho(0) ~ \exp(-\lambda / W),
+    $$ 
   
-  where $\lambda$ is a non-universal fitting parameter.
+    where $\lambda$ is a non-universal fitting parameter.
   2. say something
   3. 
 
