@@ -22,28 +22,27 @@ The detailed layout and repository contents are as follows:
 
 ```
 Upper-critical-dimension-for-dirty-Weyl-semimetal-to-metal-quantum-phase-transitions/
-├── README.md                                      this file
-├── Dirac_Weyl_KPM/                                ...
-    |── Dirac_Weyl_KPM_ver0.6
-        |── datafiles/
-        |── errorfiles/
-        |── tempfiles/
-        |── core_routines.py
-        |── Dirac_Weyl_main.py
-        |── Hamiltonians.py
-        |── input.yaml
-        |── postroutines.py
-    |── Dirac_Weyl_KPM_MPI_ver0.7.2
-        |── datafiles/
-        |── errorfiles/
-        |── tempfiles/
-        |── core_routines.py
-        |── Dirac_Weyl_main.py
-        |── Hamiltonians.py
-        |── input.yaml
-        |── postroutines.py
-├── Weyl_semimetal_upper_critical_dim.zip          ...
-
+├── README.md                                      # this file
+├── Dirac_Weyl_KPM/                                # the directory containing KPM code
+|   |── Dirac_Weyl_KPM_ver0.6                      # the KPM code 
+|   |   |── datafiles/                             # the directory containing data files produced by our code
+|   |   |── errorfiles/                            # Any numerically erroneous data file is stored in this directory 
+|   |   |── tempfiles/                             # the directory that stores temporarily data files from bins of disorder realizations
+|   |   |── core_routines.py                       # Core KPM routines and other important numerical routines
+|   |   |── Dirac_Weyl_main.py                     # the main python file
+|   |   |── Hamiltonians.py                        # the Hamiltonians
+|   |   |── input.yaml                             # the input file for a KPM calculation
+|   |   └── postroutines.py                        # post-routines for writing ADOS and some other information
+|   |── Dirac_Weyl_KPM_MPI_ver0.7.2                # the embarrassingly-parallelized version of KPM code with MPI
+|   |   |── datafiles/
+|   |   |── errorfiles/
+|   |   |── tempfiles/
+|   |   |── core_routines.py
+|   |   |── Dirac_Weyl_main.py
+|   |   |── Hamiltonians.py
+|   |   └── input.yaml
+|   └────── postroutines.py
+└── Weyl_semimetal_upper_critical_dim.zip          # the raw data
 ```
 
 
