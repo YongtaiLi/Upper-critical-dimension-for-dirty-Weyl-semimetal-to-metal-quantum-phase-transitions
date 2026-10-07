@@ -102,9 +102,10 @@ Weyl_semimetal_upper_critical_dim/
 ```
 
 ## Filename conventions
+* ####  For folders
+  (say something)
 * ####  For data files
-- ####  For folders
-
+  (say something)
 ## Data format
 
 
