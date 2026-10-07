@@ -16,9 +16,49 @@ With our data as well as the critical exponents obtained from scalings, one can 
   1. Data collpase of $\rho(E)\delta^{-\nu (d - z)}$ against $|E|\delta^{-\nu z}$ over full range of $W$ on the largest system size of one certain dimension, and
   2. Finite-size data collapse of $\rho(0)L^{d - z}$ against $\delta L ^{1 / \nu}$ on the metallic side (i.e., for $W > W_{c}$).
 
-
-
 ## Repository contents
+
+The detailed layout and repository contents are as follows:
+
+```
+Upper-critical-dimension-for-dirty-Weyl-semimetal-to-metal-quantum-phase-transitions/
+├── README.md                                      this file
+├── Dirac_Weyl_KPM/                                ...
+    |── Dirac_Weyl_KPM_ver0.6
+        |── datafiles/
+        |── errorfiles/
+        |── tempfiles/
+        |── core_routines.py
+        |── Dirac_Weyl_main.py
+        |── Hamiltonians.py
+        |── input.yaml
+        |── postroutines.py
+    |── Dirac_Weyl_KPM_MPI_ver0.7.2
+        |── datafiles/
+        |── errorfiles/
+        |── tempfiles/
+        |── core_routines.py
+        |── Dirac_Weyl_main.py
+        |── Hamiltonians.py
+        |── input.yaml
+        |── postroutines.py
+├── Weyl_semimetal_upper_critical_dim.zip          ...
+
+
+
+├── kpm/                   the Python package
+│   ├── io.py              filename conventions + data loading
+│   ├── model.py           tight-binding Hamiltonian + KPM DOS kernel (needs kwant)
+│   ├── generate.py        produce single-seed DOS data
+│   ├── consolidate.py     seed-average + pack into .npz
+│   ├── fit.py             critical-exponent analysis (z, beta, nu)
+│   └── figures.py         the six-panel scaling figure
+└── data/
+    ├── singles/           single-seed DOS  (primary dataset, 1101 files)
+    ├── seed_averaged/     DOS averaged over seeds        [derived]
+    ├── products/          (W, E, DOS) .npz per (t2, L)   [derived]
+    └── figures/           scaling_t2_{t2}.pdf            [derived]
+```
 
 
 ## Filename conventions
