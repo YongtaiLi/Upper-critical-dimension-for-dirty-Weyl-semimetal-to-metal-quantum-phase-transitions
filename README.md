@@ -8,7 +8,7 @@ This repository contains extensive raw data and necessray code and scripts that 
 
 From our raw data, one can perform several scaling analyses and data collapses. Key scaling analyses include:
   1. BCS like scaling for average density of states (ADOS) at zero energy as a function of disorder strength for 2D Weyl fermions: $\rho(0) ~ \exp(-\lambda / W),$ where $\lambda$ is a non-universal fitting parameter.
-  2. ADOS linear scaling for $W$ far from $W_{c}$ (for $d \geq 3$) and $W \ll 1$ for $d = 2$, in order to confirm $\rho(E) ~ |E|^{d - 1}$ in the clean limit. 
+  2. ADOS linear scaling for $W$ far from $W_{c}$ (for $d \geq 3$) and $W \ll 1$ for $d = 2$, in order to confirm $\rho(E) \sim |E|^{d - 1}$ in the clean limit. 
   3. ADOS scaling at criticality for $d \geq 3$: $\rho(E) \sim |E|^{\frac{d}{z} - 1}$, where $z$ is the dynamic exponent.
   4. ADOS at zero energy scaling as a function of the reduced distance from quantum critical point (QCP) for $d \geq 3$: $\rho(0) \sim \delta ^{\beta}, where $\beta$ is the order parameter exponent.
 With $z$ and $\beta$ obtained from this series of scaling analyses, one may evaluate the correlation length exponent $\nu$ as $\nu = \beta / (d - z)$ for $d \geq 3$.
