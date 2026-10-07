@@ -101,9 +101,9 @@ Weyl_semimetal_upper_critical_dim/
         └── Rescaling_ADOS_vs_Epow.py              # The script for rescaling of ADOS for W << Wc for Weyl fermions in all dimensions
 ```
 
-
 ## Filename conventions
-
+#### For data files
+#### For folders
 
 ## Data format
 
