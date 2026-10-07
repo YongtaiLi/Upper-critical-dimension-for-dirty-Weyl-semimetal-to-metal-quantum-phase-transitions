@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository contains extensive raw data and necessray code and scripts that does kernel polynomial method (KPM) [^1] calculations using 'kwant' [^2] and data analysis for our numerical study on the upper-critical dimension for disordered Weyl semimetal-to-metal transitions.
+This repository contains extensive raw data and necessray code and scripts that does kernel polynomial method (KPM) [^1] calculations using `kwant` [^2] and data analysis for our numerical study on the upper-critical dimension for disordered Weyl semimetal-to-metal transitions.
 
 ## Repository contents
 
