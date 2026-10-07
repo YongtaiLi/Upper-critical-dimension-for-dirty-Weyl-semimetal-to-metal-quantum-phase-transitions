@@ -1,0 +1,41 @@
+Data_and_output:
+  label          : "test_box"      # a user-specified label for output files
+
+Lattice:
+  dimension      : 3               # spatial dimension of the lattice, 2, 3, 4, 5, 6
+  spin           : 1               # 1: spin-1/2, 3: spin-3/2, and 5: spin-5/2. Note: this works only when "dimension = 3"
+  bound_cond     : "PBC"           # "PBC" for periodic boundary condition; "OBC" for open boundary condition
+  linear_size    : 80              # the linear size of the lattice
+  mu             : 0               # chemical potential
+
+Disorder:
+  W              : 1.00E0          # disorder strength
+  distr          : "box"           # disorder distribution. It takes two values: "box", and "binary", where
+                                   # "box" means a uniform disorder distribution from -W/2 to W/2, and
+                                   # "binary" means a binary distribution of two discrete potential: W and -W, and
+                                   # "chiral" means while box disorder distribution is applied, V_i has opposite signs per site depending on the spin/chiral degrees of freedom V_i enters
+    
+####################################################
+# RULE: "Nm_init" and "Nm_fin" must take integer values that are exponents of 2.
+####################################################
+
+Disorder_averaging:
+  bin_size       : 2               # the size of each bin that stores data from several disorder realizations
+  runs           : 2               # number of bins that stores disorder realizations
+
+####################################################
+# RULE: The total number of disorder realizations is: Ndis = "bin_size" * "runs"
+####################################################
+
+Symmetry_breaking_terms:          
+  Hidden_order   : True            # a "hidden order" proposed in Roy, Bitan, arXiv:2606.27368v1 (2026)
+  alpha_Hidden   : 0.0e0           # Coupling constant (strength) of the hidden order
+
+KPM_ADOS_details:
+  KPM_ADOS       : True            # Calculate ADOS using KPM.
+  Nm_init        : 512             # initial number of moments for data output
+  Nm_fin         : 512             # final (maximum) number of moments for data output
+  random_vecs    : 12              # Number of random vectors taken for KPM to calculate spectral densities. For ADOS, it's usually 10 ~ 12.
+  enegrid        : 801             # the grid of energy for data output (usually an ODD NUMBER, so that there's one grid for nwn = 0.0d0)
+  enerange       : 4.0e0           # the energy range for data output
+
