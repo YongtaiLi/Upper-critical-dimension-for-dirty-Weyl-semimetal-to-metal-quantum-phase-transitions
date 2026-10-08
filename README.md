@@ -217,6 +217,7 @@ Weyl_semimetal_upper_critical_dim/
       4.0000e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
     ```
 
+    The first row is a single-line header marking the the contents of the columns, and the rest of the rows are ADOS at different energy (or frequency, setting $\hbar = 1$) values. 
   * #### For spreadsheet named `job_table_ADOS_dD_Ll.xlsx`
     (...)
 
