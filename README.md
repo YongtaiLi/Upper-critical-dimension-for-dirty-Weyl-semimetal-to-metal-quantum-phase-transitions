@@ -241,7 +241,7 @@ Our density of states (DOS)-based data are driven by kernel polynomial method (K
 
 For more details of KPM, we recommend the interested viewers to [^1]. As aforementioned, our KPM calculations is facilitated with `kwant`[^2], an open-source python package for quantum transport simulations. Interested readers may read [^2] for details of `kwant`.   
 
-## Using the data
+## Using the code
 
 We uploaded our python code for KPM simulations for interested viewers to have a hand-on experience of running our code (located in `Dirac_Weyl_KPM/Dirac_Weyl_KPM_ver0.6/`). Before running our code, please make sure `kwant` is installed. For details on installing, see [^2]. 
 
