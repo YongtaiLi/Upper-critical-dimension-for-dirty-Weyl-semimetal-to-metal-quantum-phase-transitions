@@ -166,6 +166,7 @@ Weyl_semimetal_upper_critical_dim/
     Here, `Z1` and `Z2` coming from `kwant-Z1.out` and `kwant-Z2.out`, respectively, are different job IDs assigned by the SLURM scheduler for eahc individual "sub-jobs". The ADOS file `ADOS_jobx_Ww.dat` right under `.../datafiles_x/` is obtained via running the script `.../post_processing_routines/ADOS_processing/ADOS_extractor.py`.
 
     An example could be, within `ADOS_6D/L_0012/datafiles_030/`:
+
     ```
     .../datafiles_030/
     ├── ADOS_job030_W415.dat
@@ -194,27 +195,28 @@ Weyl_semimetal_upper_critical_dim/
     └── tempfiles_030_04/
         └── ...
     ```
+    
     This job is calculated for 6D Weyl fermions for $L = 12$ at $W = 4.15$, This jobs is also is manually divided into four "sub-jobs", each "sub-job" was run in a serial manner.
     
 ## Data format
   * #### For ADOS file named `ADOS_jobx_Ww.dat`
     An ADOS data file exists underneath every job directory `.../datafiles_x/`. A typical layout of the file is (take an example of `ADOS_5D/L_0014/datafiles_001/ADOS_job001_W00.dat`):
-    ```
-## nwn       Nm = 256       Nm = 512       Nm = 1024       Nm = 2048       Nm = 4096       Nm = 8192
- -4.0000e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
- -3.9900e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
- -3.9800e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
- -3.9700e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
-
-......
-
-  3.9700e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
-  3.9800e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
-  3.9900e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
-  4.0000e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
 
     ```
-    
+    ## nwn       Nm = 256       Nm = 512       Nm = 1024       Nm = 2048       Nm = 4096       Nm = 8192
+     -4.0000e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
+     -3.9900e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
+     -3.9800e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
+     -3.9700e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
+
+      ......
+
+      3.9700e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
+      3.9800e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
+      3.9900e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
+      4.0000e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
+    ```
+
   * #### For spreadsheet named `job_table_ADOS_dD_Ll.xlsx`
     (...)
 
