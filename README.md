@@ -194,11 +194,14 @@ Weyl_semimetal_upper_critical_dim/
     └── tempfiles_030_04/
         └── ...
     ```
-    This job is manually divided into four "sub-jobs", each "sub-job" was run in a serial manner.
+    This job is calculated for 6D Weyl fermions for $L = 12$ at $W = 4.15$, This jobs is also is manually divided into four "sub-jobs", each "sub-job" was run in a serial manner.
     
 ## Data format
-
-
+  * #### For ADOS file named `ADOS_jobx_Ww.dat`
+    (...)
+    
+  * #### For spreadsheet named `job_table_ADOS_dD_Ll.xlsx`
+    (...)
 
 ## Numerical methods
 
