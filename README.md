@@ -239,11 +239,24 @@ Weyl_semimetal_upper_critical_dim/
 
 Our density of states (DOS)-based data are driven by kernel polynomial method (KPM). In KPM, instead of diagonalizing the Hamiltonian directly to get the distribution of eigenstates, the DOS is expanded in terms of Chebyshev polynomials with designated expansion coefficient $\mu_n -> g_n \mu_n$ (where $\{ \mu_n \}$ are the moments) to damp the Gibbs oscillations due to the series being truncated to finite numbers. The expansion coefficients $g_n$ is evaluated out of the choice of kernels, and typically we use Jackson kernel. Our choice of the number of moments (and therefore the number of Chebyshev terms and expansion coefficients) are discussed above. Meanwhile, the calculation of the moments $\mu_{n}$ requires a certain number of unimodular random vectors over which the trace of Chebyshev polynomials with respect to the (rescaled) Hamiltonian will be taken. We take 12 unimodular random vectors for stochastic trace evaluation and thus calculation of $\mu_{n}$. 
 
-For more details of KPM, we recommend the interested viewers to [^1]. As aforementioned, our KPM calculations is facilitated with `kwant`[^2], an open-source python package for quantum transport simulations. Interested reader may read [^2] for details of `kwant`.   
+For more details of KPM, we recommend the interested viewers to [^1]. As aforementioned, our KPM calculations is facilitated with `kwant`[^2], an open-source python package for quantum transport simulations. Interested readers may read [^2] for details of `kwant`.   
 
 ## Using the data
 
+We uploaded our python code for KPM simulations for interested viewers to have a hand-on experience of running our code (located in `Dirac_Weyl_KPM/Dirac_Weyl_KPM_ver0.6/`). Before running our code, please make sure `kwant` is installed. For details on installing, see [^2]. 
 
+Before running our code, please edit the input parameter in `input.yaml`. The input file contains extensive comments next to the input variables, which will not be explained in detail here. 
+
+To run our code, please simply type in your command line
+
+```
+$ python Dirac_Weyl_main.py
+```
+Your data files will be written in `datafiles/` once the job is completed. The standard output file `YT_jobx_Ww.out` will be updated constantly during the time of running. 
+
+## Contact
+
+For more questions regarding this repository and its content, please contact Yongtai Li at [yol321@lehigh.edu](yol321@lehigh.edu). 
 
 ## Citations:
 [^1]: A. Weiße, G. Wellein, A. Alvermann, and H. Fehske, The kernel polynomial method, Rev. Mod. Phys. 78, 275 (2006)
