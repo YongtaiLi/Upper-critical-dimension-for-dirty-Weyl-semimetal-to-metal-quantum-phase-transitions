@@ -217,7 +217,9 @@ Weyl_semimetal_upper_critical_dim/
       4.0000e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
     ```
 
-    The first row is a single-line header marking the the contents of the columns, and the rest of the rows are ADOS at different energy (or frequency, setting $\hbar = 1$) values. Column-wise, the first column is contains the energy values (with a grid of $0.01$, ranging from $-4.00$ to $4.00$). The rest of the columns are ADOS calculated at different numbers of Chebyshev moments $N_{m}$. In all of our calculations, we consider a variety of $N_{m}$ from $N_{m, init} = 2^8 = 256$ to $N_{m, fin} = 2^13 = 8192$, with a step of a power of 2. So, while we conduct our analysis on ADOS calculated at $N_{m} = 4096$, we have data of ADOS calculated at $N_{m} = 256, 512, 1024, ..., 8192$ as well. 
+    The first row is a single-line header marking the the contents of the columns, and the rest of the rows are ADOS at different energy (or frequency, setting $\hbar = 1$) values. Column-wise, the first column is contains the energy values (with a grid of $0.01$, ranging from $-4.00$ to $4.00$). The rest of the columns are ADOS calculated at different numbers of Chebyshev moments $N_{m}$. In all of our calculations, we consider a variety of $N_{m}$ from $N_{m, init} = 2^8 = 256$ to $N_{m, fin} = 2^{13} = 8192$, with a step of a power of $2$. So, while we conduct our analysis on ADOS calculated at $N_{m} = 4096$, we have data of ADOS calculated at $N_{m} = 256, 512, 1024, ..., 8192$ as well.
+
+    With `kwant` for our KPM calculations, the energy values at which eigenstates are not expected to exist give rise to `nan` in the spectral densities. We instead replace the `nan` by a positive infinitesimal of $10^{-10}$. 
     
   * #### For spreadsheet named `job_table_ADOS_dD_Ll.xlsx`
     (...)
