@@ -236,7 +236,7 @@ Weyl_semimetal_upper_critical_dim/
     We note that the disorder strengths are not ranked in ascending order always with respect to job indices. To build an accurate, one-to-one correspondence map for job indices and disorder strength (for certain dimension and system size), we frequently use `pandas` to read our spreadsheet when performing scaling analysis, and (optionally) followed by converting it to a python dictionary.
         
 ## Numerical methods
-
+Our density of states (DOS)-based data are driven by kernel polynomial method (KPM). In KPM, instead of diagonalizing the Hamiltonian directly to get the distribution of eigenstates, the DOS is expanded in terms of Chebyshev polynomials with designated expansion coefficient $\mu_n -> g_n \mu_n$ (where $\{\mu_n\}$ are the moments) to damp the Gibbs oscillations due to the series being truncated to finite numbers. 
 
 
 ## Using the data
