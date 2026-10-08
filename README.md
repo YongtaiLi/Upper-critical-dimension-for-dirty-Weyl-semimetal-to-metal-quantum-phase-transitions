@@ -151,14 +151,17 @@ Weyl_semimetal_upper_critical_dim/
     |   ├── ADOS_jobx_01_Ww.dat
     |   ├── kwant-Z1.out
     |   └── YT_jobx_01_Ww.out
-    └── datafiles_x_02/
+    ├── datafiles_x_02/
     |   ├── ADOS_jobx_02_Ww.dat
     |   ├── kwant-Z2.out
     |   └── YT_jobx_02_Ww.out
+    ├── ...                          # In case if this job is manually divided into more than two "sub-jobs"
     ├── tempfiles_x_01/
     |   └── ...
-    └── tempfiles_x_02/
-        └── ...
+    ├── tempfiles_x_02/
+    |   └── ...
+    └── ...                          # In case if this job is manually divided into more than two "sub-jobs"
+  
     ```
     Here, `Z1` and `Z2` coming from `kwant-Z1.out` and `kwant-Z2.out`, respectively, are different job IDs assigned by the SLURM scheduler for eahc individual "sub-jobs". The ADOS file `ADOS_jobx_Ww.dat` right under `.../datafiles_x/` is obtained via running the script `.../post_processing_routines/ADOS_processing/ADOS_extractor.py`.
 
@@ -191,12 +194,15 @@ Weyl_semimetal_upper_critical_dim/
     └── tempfiles_030_04/
         └── ...
     ```
+    This job is manually divided into four "sub-jobs", each "sub-job" was run in a serial manner.
     
 ## Data format
 
 
+
 ## Numerical methods
 
+(...)
 
 ## Using the data
 
