@@ -236,10 +236,14 @@ Weyl_semimetal_upper_critical_dim/
     We note that the disorder strengths are not ranked in ascending order always with respect to job indices. To build an accurate, one-to-one correspondence map for job indices and disorder strength (for certain dimension and system size), we frequently use `pandas` to read our spreadsheet when performing scaling analysis, and (optionally) followed by converting it to a python dictionary.
         
 ## Numerical methods
-Our density of states (DOS)-based data are driven by kernel polynomial method (KPM). In KPM, instead of diagonalizing the Hamiltonian directly to get the distribution of eigenstates, the DOS is expanded in terms of Chebyshev polynomials with designated expansion coefficient $\mu_n -> g_n \mu_n$ (where $\{\mu_n\}$ are the moments) to damp the Gibbs oscillations due to the series being truncated to finite numbers. 
 
+Our density of states (DOS)-based data are driven by kernel polynomial method (KPM). In KPM, instead of diagonalizing the Hamiltonian directly to get the distribution of eigenstates, the DOS is expanded in terms of Chebyshev polynomials with designated expansion coefficient $\mu_n -> g_n \mu_n$ (where $\{ \mu_n \}$ are the moments) to damp the Gibbs oscillations due to the series being truncated to finite numbers. The expansion coefficients $g_n$ is evaluated out of the choice of kernels, and typically we use Jackson kernel. Our choice of the number of moments (and therefore the number of Chebyshev terms and expansion coefficients) are discussed above. Meanwhile, the calculation of the moments $\mu_{n}$ requires a certain number of unimodular random vectors over which the trace of Chebyshev polynomials with respect to the (rescaled) Hamiltonian will be taken. We take 12 unimodular random vectors for stochastic trace evaluation and thus calculation of $\mu_{n}$. 
+
+For more details of KPM, we recommend the interested viewers to [^1]. As aforementioned, our KPM calculations is facilitated with `kwant`[^2], an open-source python package for quantum transport simulations. Interested reader may read [^2] for details of `kwant`.   
 
 ## Using the data
+
+
 
 ## Citations:
 [^1]: A. Weiße, G. Wellein, A. Alvermann, and H. Fehske, The kernel polynomial method, Rev. Mod. Phys. 78, 275 (2006)
