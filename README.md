@@ -219,14 +219,25 @@ Weyl_semimetal_upper_critical_dim/
 
     The first row is a single-line header marking the the contents of the columns, and the rest of the rows are ADOS at different energy (or frequency, setting $\hbar = 1$) values. Column-wise, the first column is contains the energy values (with a grid of $0.01$, ranging from $-4.00$ to $4.00$). The rest of the columns are ADOS calculated at different numbers of Chebyshev moments $N_{m}$. In all of our calculations, we consider a variety of $N_{m}$ from $N_{m, init} = 2^8 = 256$ to $N_{m, fin} = 2^{13} = 8192$, with a step of a power of $2$. So, while we conduct our analysis on ADOS calculated at $N_{m} = 4096$, we have data of ADOS calculated at $N_{m} = 256, 512, 1024, ..., 8192$ as well.
 
-    With `kwant` for our KPM calculations, the energy values at which eigenstates are not expected to exist give rise to `nan` in the spectral densities. We instead replace the `nan` by a positive infinitesimal of $10^{-10}$. 
+    With `kwant` for our KPM calculations, the energy values at which eigenstates are not expected to exist give rise to `nan` in the spectral densities. We instead replace the `nan` by a positive infinitesimal of $10^{-10}$. This is the reason one would observe several `1.00000000e-10` particularly close to the energy boundaries. 
     
   * #### For spreadsheet named `job_table_ADOS_dD_Ll.xlsx`
-    (...)
+    As aforementioned, the spreadsheet `job_table_ADOS_dD_Ll.xlsx` is directly under the directory that stores all data for one particular system size in one particular dimension, i.e., `ADOS_dD/L_l/`. Containing the choices of various input parameters, the typical layout is (take an example of `ADOS_3D/L_0180/job_table_ADOS_3D_L0180.xlsx`):
 
+    ```
+    1	0.000	180	3	1	256	8192	C
+    2	2.55	180	3	1	256	8192	C
+    3	2.60	180	3	1	256	8192	C
+    4	2.65	180	3	1	256	8192	C
+    ...
+    ```
+    All the spreadsheets are header-less. The first column is the job index `x` (not strictly 3-digit here in the spreadsheet, though), the second column is the disorder strength `w`. The following columns contain the choices of system size `l` (not strictly 4-digit here in the spreadsheet, though), the dimension `d`, the spin (without that ` / 2`, i.e., `1` means $s = 1 / 2$), the smallest number of Chebyshev moments $N_{m, init}$, the largest number of moments $N_{m, fin}$, with the last column recording the status of the job (`C` means this particular job is complete).
+
+    We note that the disorder strengths are not ranked in ascending order always with respect to job indices. To build an accurate, one-to-one correspondence map for job indices and disorder strength (for certain dimension and system size), we frequently use `pandas` to read our spreadsheet when performing scaling analysis, and (optionally) followed by converting it to a python dictionary.
+        
 ## Numerical methods
 
-(...)
+
 
 ## Using the data
 
