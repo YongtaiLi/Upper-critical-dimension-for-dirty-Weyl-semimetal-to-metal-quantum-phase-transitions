@@ -256,7 +256,7 @@ Your data files will be written in `datafiles/` once the job is completed. The s
 
 ## Contact
 
-For more questions regarding this repository and its content, please contact Yongtai Li at [yol321@lehigh.edu](yol321@lehigh.edu). 
+For more questions regarding this repository and its content, please contact Yongtai Li at [yol321@lehigh.edu](mailto:yol321@lehigh.edu).
 
 ## Citations:
 [^1]: A. Weiße, G. Wellein, A. Alvermann, and H. Fehske, The kernel polynomial method, Rev. Mod. Phys. 78, 275 (2006)
