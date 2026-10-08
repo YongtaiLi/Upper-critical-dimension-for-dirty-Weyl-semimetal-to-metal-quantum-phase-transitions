@@ -119,7 +119,7 @@ Weyl_semimetal_upper_critical_dim/
 
   It means this job with index `014` is for 4D Weyl fermion calculated on a system with size $L = 52$. But looking at the spreadsheet `job_table_ADOS_4D_L0052.xlsx`, we find that the job directory is for $W = 3.25$. 
 * ####  For data files within `datafiles_x/`
-  * ##### If a job is run completely in a serial manner:
+  * #### If a job is run completely in a serial manner:
     There are typically one sub-directory and two other files, as
     ```
     .../datafiles_x/
@@ -142,7 +142,7 @@ Weyl_semimetal_upper_critical_dim/
     ```
     Here, $W = 2.75$, `ADOS_job006_W275.dat` contains the ADOS data for this job, `YT_job006_W275.out` is the standard output file, and `tempfiles_006/` contains the DOS from several disorder realizations. Since this job was run on HPC with job ID `14233913`, there exists the file `kwant-14233913.out`. 
     
-  * ##### If a job is run in a manually parallel way:
+  * #### If a job is run in a manually parallel way:
     There sub-directory typically looks like
     ```
     .../datafiles_x/
@@ -198,7 +198,22 @@ Weyl_semimetal_upper_critical_dim/
     
 ## Data format
   * #### For ADOS file named `ADOS_jobx_Ww.dat`
-    (...)
+    An ADOS data file exists underneath every job directory `.../datafiles_x/`. A typical layout of the file is (take an example of `ADOS_5D/L_0014/datafiles_001/ADOS_job001_W00.dat`):
+    ```
+## nwn       Nm = 256       Nm = 512       Nm = 1024       Nm = 2048       Nm = 4096       Nm = 8192
+ -4.0000e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
+ -3.9900e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
+ -3.9800e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
+ -3.9700e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
+
+......
+
+  3.9700e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
+  3.9800e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
+  3.9900e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
+  4.0000e+00   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10   1.00000000e-10
+
+    ```
     
   * #### For spreadsheet named `job_table_ADOS_dD_Ll.xlsx`
     (...)
